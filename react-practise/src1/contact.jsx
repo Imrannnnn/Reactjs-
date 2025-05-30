@@ -16,7 +16,10 @@ export default function Contact(props) {
                  <p>{props.email}</p>
          </div>
     
-
+<div className="Address">
+   <h2>{props.address}</h2>
+   
+</div>
        
         </article>
    )
