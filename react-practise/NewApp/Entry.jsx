@@ -1,26 +1,20 @@
 export default function Entry(props) {
     return(
-        <article className="journal-entry">
+    
+       <div>
+<article>
+    <img src={props.data.img} alt={props.title} />
+ <h2>{props.data.id}</h2>
+</article>
 
-            <div className="main-image-container">
-                <img 
-                src={props.img}
-                />
+<h1>{props.data.title}</h1>  
+<h2>{props.data.country}</h2>
+<h3>{props.data.googleMapsLink}</h3>
+<p>{props.data.date}</p>
+<p>{props.data.text}</p>
+    
+       </div>
+       
 
-            </div>
-
-            <div className="info-container">
-                <img className="marker"
-                src="../NewApp/img/felix.png"
-                />
-
-                <span className="country" > {props.country} </span>
-                <a>{props.googleMapLink} </a>
-                <h2 className="entry-title"> {props.title} </h2>
-                <p className="trip-date">{props.date}</p>
-                <p className="entry-text">{props.text}</p>
-
-            </div>
-        </article>
     )
 }
